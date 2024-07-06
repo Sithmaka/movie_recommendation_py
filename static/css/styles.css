@@ -1,0 +1,42 @@
+/* styles.css */
+
+/* Custom container padding */
+.container {
+    padding-top: 50px;
+}
+
+/* Center the heading */
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Style the form */
+form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* Style the input field */
+input[type="text"] {
+    border-radius: 0;
+}
+
+/* Style the submit button */
+button[type="submit"] {
+    width: 100%;
+    border-radius: 0;
+}
+
+/* Style the recommendations list */
+.list-group-item {
+    font-size: 1.1em;
+}
+
+/* Add some margin to the back button */
+.btn-secondary {
+    display: block;
+    width: 100px;
+    margin: 30px auto;
+    border-radius: 0;
+}

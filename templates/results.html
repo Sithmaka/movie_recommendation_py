@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recommendations</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5">{{ movie['Title'] }}</h1>
+        {% if movie['Director'] %}
+        <p><strong>Director:</strong> {{ movie['Director'] }}</p>
+        {% endif %}
+        <h2>Recommended Movies:</h2>
+        <ul class="list-group mt-3">
+            {% for rec in recommendations %}
+            <li class="list-group-item">
+                <strong>{{ rec[0] }} ({{ rec[2] }})</strong><br>
+                <strong>Genre:</strong> {{ rec[5] }}<br>
+                <strong>Director:</strong> {{ rec[3] }}<br>
+                <strong>IMDb Rating:</strong> {{ rec[1] }}<br>
+                <strong>Star Cast:</strong> {{ rec[4].replace('|', ', ') }}
+            </li>
+            {% endfor %}
+        </ul>
+        <a href="/" class="btn btn-secondary mt-3">Back</a>
+    </div>
+</body>
+</html>
